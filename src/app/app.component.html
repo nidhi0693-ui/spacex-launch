@@ -1,20 +1,53 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="row col-md-12 align">
+  <div class="jumb col-md-3 col-sm-6 col-xs-6">
+    <div class="jumbotron">
+      <h4 class="display-4">Filters</h4>
+      <p class="lead">Launch Year</p>
+      <hr class="my-4">
+      <div class="row col-md-12">
+        <p class="col-md-5 badge badge-secondary bd-color" style="margin-right: 10px;">2007</p>
+        <p class="col-md-6 badge badge-secondary bd-color">2008</p>
+      </div>
+      <div class="row col-md-12">
+        <p class="col-md-5 badge badge-secondary bd-color" style="margin-right: 10px;">2009</p>
+        <p class="col-md-6 badge badge-secondary bd-color">2010</p>
+      </div>
+      <div class="row col-md-12">
+        <p class="col-md-5 badge badge-secondary bd-color" style="margin-right: 10px;">2011</p>
+        <p class="col-md-6 badge badge-secondary bd-color">2012</p>
+      </div>
+      <div class="row col-md-12">
+        <p class="col-md-5 badge badge-secondary bd-color" style="margin-right: 10px;">2013</p>
+        <p class="col-md-6 badge badge-secondary bd-color" (click)="fetchDetails()">2014</p>
+      </div> 
+      <p class="lead">Successful Launch</p> 
+      <div class="row col-md-12">
+        <p class="col-md-5 badge badge-secondary bd-color" (click)="fetchLaunch()" style="margin-right: 10px;">True</p>
+        <p class="col-md-6 badge badge-secondary bd-color">False</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-9 col-sm-6 col-xs-6 space">
+    <div class="row col-md-12">
+      <div *ngFor="let sp of spaceDetails">
+        <!-- <div class="col-md-9"> -->
+          <div class="card card-content">
+            <img class="card-img-top card-src" src={{sp.links.mission_patch_small}} alt="Card image cap">
+            <div class="card-body">
+              <!-- <h5 class="card-title"></h5> -->
+              <p class="card-text">{{sp.mission_name}}&nbsp;#{{sp.flight_number}}</p>
+              <p class="card-msn">Mission ids: &nbsp; <span class="font-al">NA</span></p>
+              <p><span class="card-msn">Launch Year:</span>&nbsp; <span class="font-al">{{sp.launch_year}}</span></p>
+              <p><span class="card-msn">Successful Launch:</span>&nbsp; <span class="font-al">{{sp.launch_success}}</span></p>
+              <!-- <p><span class="card-msn">Successful Landing:</span>&nbsp; <span>{{sp.launch_year}}</span></p> -->  
+            </div>
+          </div>
+        <!-- </div> -->
+        
+      </div>
+    </div>
+     
+  </div>
+  
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-

@@ -1,0 +1,46 @@
+.card-content {
+    /* width: 18rem; */
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.card-src {
+    padding: 32px;
+    width: 300px;
+    height: 300px;
+}
+
+.card-text {
+    color: #0039e6;
+    font-weight: bold;
+}
+
+.card-msn {
+    font-weight: bold;
+}
+
+.font-al {
+    color: #0039e6;
+}
+
+.bd-color {
+    background-color: #00b33c;
+}
+
+.display-4 { 
+    font-size: 2.5rem;
+}
+
+@media only screen and (min-width: 580px) {
+    .jumb {
+        width: 36%;
+    }
+
+    .space {
+        width: 6%;
+    }
+}
+
+.align {
+    margin: 20px;
+}
